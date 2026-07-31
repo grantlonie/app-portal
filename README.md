@@ -39,8 +39,24 @@ docker compose up -d
 
 Day-to-day: push to `main` (GitHub Actions) or run `./deploy.sh`.
 
+## Theme
+
+The UI follows the device `prefers-color-scheme` (light or dark). There is no
+in-app toggle.
+
+## Icons
+
+Icons are the real app favicons / apple-touch icons, fetched from each site and
+cached under `public/icons/`:
+
+```bash
+python3 scripts/fetch-icons.py
+```
+
+Re-run after adding an app or when an app changes its icon.
+
 ## Adding an app
 
 1. Add a Caddy block (and DNS) in personal-infra.
-2. Append an entry to `public/apps.json` (name, url, description, icon).
-3. Optionally add an SVG under `public/icons/`.
+2. Append an entry to `public/apps.json` (name, url, description; `icon` optional).
+3. Run `python3 scripts/fetch-icons.py` to cache the site icon.

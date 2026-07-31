@@ -1,15 +1,40 @@
 :root {
-  --ink: #071316;
-  --panel: rgba(12, 31, 36, 0.72);
-  --panel-border: rgba(126, 200, 176, 0.18);
-  --mint: #7ec8b0;
-  --mint-soft: rgba(126, 200, 176, 0.14);
-  --sand: #e8dcc8;
-  --sand-muted: rgba(232, 220, 200, 0.72);
-  --glow: rgba(126, 200, 176, 0.35);
+  --ink: #f4f7f6;
+  --panel: rgba(255, 255, 255, 0.78);
+  --panel-border: rgba(15, 74, 62, 0.12);
+  --panel-hover: rgba(255, 255, 255, 0.95);
+  --mint: #1f7a66;
+  --mint-soft: rgba(31, 122, 102, 0.1);
+  --sand: #132126;
+  --sand-muted: rgba(19, 33, 38, 0.68);
+  --glow: rgba(31, 122, 102, 0.28);
+  --atmosphere-1: rgba(31, 122, 102, 0.16);
+  --atmosphere-2: rgba(70, 140, 190, 0.1);
+  --atmosphere-3: rgba(180, 150, 90, 0.12);
+  --atmosphere-base: linear-gradient(165deg, #f7faf9 0%, #eef3f1 45%, #e8eef3 100%);
   --radius: 1.1rem;
   --font-display: "Fraunces", Georgia, serif;
   --font-body: "Sora", sans-serif;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #071316;
+    --panel: rgba(12, 31, 36, 0.72);
+    --panel-border: rgba(126, 200, 176, 0.18);
+    --panel-hover: rgba(16, 40, 46, 0.88);
+    --mint: #7ec8b0;
+    --mint-soft: rgba(126, 200, 176, 0.14);
+    --sand: #e8dcc8;
+    --sand-muted: rgba(232, 220, 200, 0.72);
+    --glow: rgba(126, 200, 176, 0.35);
+    --atmosphere-1: rgba(126, 200, 176, 0.22);
+    --atmosphere-2: rgba(126, 184, 232, 0.14);
+    --atmosphere-3: rgba(61, 46, 20, 0.45);
+    --atmosphere-base: linear-gradient(165deg, #0a1a1e 0%, #071316 45%, #0c1820 100%);
+    color-scheme: dark;
+  }
 }
 
 *,
@@ -19,7 +44,7 @@
 }
 
 html {
-  color-scheme: dark;
+  color-scheme: light dark;
 }
 
 body {
@@ -38,10 +63,10 @@ body {
   z-index: 0;
   pointer-events: none;
   background:
-    radial-gradient(ellipse 80% 55% at 12% -10%, rgba(126, 200, 176, 0.22), transparent 55%),
-    radial-gradient(ellipse 70% 50% at 92% 8%, rgba(126, 184, 232, 0.14), transparent 50%),
-    radial-gradient(ellipse 60% 45% at 50% 110%, rgba(61, 46, 20, 0.45), transparent 55%),
-    linear-gradient(165deg, #0a1a1e 0%, #071316 45%, #0c1820 100%);
+    radial-gradient(ellipse 80% 55% at 12% -10%, var(--atmosphere-1), transparent 55%),
+    radial-gradient(ellipse 70% 50% at 92% 8%, var(--atmosphere-2), transparent 50%),
+    radial-gradient(ellipse 60% 45% at 50% 110%, var(--atmosphere-3), transparent 55%),
+    var(--atmosphere-base);
 }
 
 .atmosphere::after {
@@ -139,8 +164,8 @@ body {
 .card:hover,
 .card:focus-visible {
   transform: translateY(-4px);
-  border-color: rgba(126, 200, 176, 0.45);
-  background: rgba(16, 40, 46, 0.88);
+  border-color: color-mix(in srgb, var(--mint) 45%, transparent);
+  background: var(--panel-hover);
   box-shadow: 0 16px 40px -18px var(--glow);
   outline: none;
 }
@@ -155,6 +180,8 @@ body {
   height: 3rem;
   border-radius: 0.75rem;
   flex-shrink: 0;
+  object-fit: contain;
+  background: var(--mint-soft);
 }
 
 .card-name {
