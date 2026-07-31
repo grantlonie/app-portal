@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Recipes",
+    "url": "https://recipes.grantlonie.com",
+    "description": "Personal cookbook and meal ideas.",
+    "icon": "/icons/recipes.svg"
+  },
+  {
+    "name": "Listen",
+    "url": "https://listen.grantlonie.com",
+    "description": "Audio library and listening queue.",
+    "icon": "/icons/listen.svg"
+  },
+  {
+    "name": "Budget",
+    "url": "https://budget.grantlonie.com",
+    "description": "Import and categorize spending.",
+    "icon": "/icons/budget.svg"
+  },
+  {
+    "name": "Vehicles",
+    "url": "https://vehicles.grantlonie.com",
+    "description": "Service reminders and maintenance logs.",
+    "icon": "/icons/vehicles.svg"
+  },
+  {
+    "name": "Worship",
+    "url": "https://worship.grantlonie.com",
+    "description": "Songs, sets, and worship planning.",
+    "icon": "/icons/worship.svg"
+  }
+]

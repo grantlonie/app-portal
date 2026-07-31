@@ -1,0 +1,20 @@
+services:
+  apps:
+    image: nginx:alpine
+    container_name: apps
+    restart: unless-stopped
+    volumes:
+      - ./public:/usr/share/nginx/html:ro
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    networks:
+      - shared
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1/"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+
+networks:
+  shared:
+    external: true
+    name: personal-infra-shared
