@@ -1,9 +1,9 @@
 [
   {
-    "name": "Recipes",
-    "url": "https://recipes.grantlonie.com",
-    "description": "Personal cookbook and meal ideas.",
-    "icon": "/icons/recipes.png"
+    "name": "Budget",
+    "url": "https://budget.grantlonie.com",
+    "description": "Import and categorize spending.",
+    "icon": "/icons/budget.svg"
   },
   {
     "name": "Listen",
@@ -12,10 +12,10 @@
     "icon": "/icons/listen.svg"
   },
   {
-    "name": "Budget",
-    "url": "https://budget.grantlonie.com",
-    "description": "Import and categorize spending.",
-    "icon": "/icons/budget.svg"
+    "name": "Recipes",
+    "url": "https://recipes.grantlonie.com",
+    "description": "Personal cookbook and meal ideas.",
+    "icon": "/icons/recipes.png"
   },
   {
     "name": "Vehicles",
