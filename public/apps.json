@@ -6,6 +6,12 @@
     "icon": "/icons/budget.svg"
   },
   {
+    "name": "Job Fit",
+    "url": "https://job-fit.grantlonie.com",
+    "description": "Accomplishments, JD matching, and employer share packs.",
+    "icon": "/icons/job-fit.svg"
+  },
+  {
     "name": "Listen",
     "url": "https://listen.grantlonie.com",
     "description": "Audio library and listening queue.",
